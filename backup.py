@@ -7,7 +7,6 @@ import secret
 
 URL = {
         'playlists': 'https://api.spotify.com/v1/me/playlists?limit=50&offset=0',
-        'playlist_tracks': 'https://api.spotify.com/v1/users/{user_id}/playlists/{playlist_id}/tracks',
         }
 
 HEADERS = {
@@ -52,6 +51,6 @@ def getTracks(playlists):
 playlists = getPlaylists()
 with open('playlists.json', 'w') as pfile:
     pfile.write(json.dumps(playlists))
-#getTracks(playlists)
+getTracks(playlists)
 
 
